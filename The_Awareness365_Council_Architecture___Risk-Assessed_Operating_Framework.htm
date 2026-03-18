@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+<!-- saved from url=(0123)file:///Users/rayjelley/Downloads/TWO_-_The_Awareness365_Council_Architecture___Risk-Assessed_Operating_Framework%20(6).htm -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Awareness365 Council Architecture — Risk-Assessed Operating Framework</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./The Awareness365 Council Architecture — Risk-Assessed Operating Framework_files/css2" rel="stylesheet">
+<style>
+:root {
+  --gold:       #c9a96a;
+  --gold-light: #d9b97a;
+  --gold-soft:  rgba(201,169,106,0.12);
+  --gold-dim:   rgba(201,169,106,0.18);
+  --gold-line:  rgba(201,169,106,0.35);
+  --deep:       #08142a;
+  --navy:       #0b1e3d;
+  --navy-mid:   #0f274f;
+  --card:       #0c1c38;
+  --card-hover: #0e2042;
+  --slate:      #7a8ea8;
+  --cream:      #f2efe8;
+  --ivory:      #ede8de;
+  --white:      #f2efe8;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--deep);
+  color: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(15,39,79,0.9) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 40% at 80% 30%, rgba(201,169,106,0.04) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 30% at 20% 70%, rgba(11,30,61,0.8) 0%, transparent 60%);
+}
+
+/* ── UTILITY ── */
+.eyebrow {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  color: var(--gold);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+.gold-line-h {
+  width: 60px;
+  height: 1px;
+  background: var(--gold-line);
+  margin: 0 auto 2.5rem;
+}
+
+.gold-line-full {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-line), transparent);
+  margin: 0;
+}
+
+/* ── REVEAL ANIMATION ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 2rem 5rem;
+  overflow: hidden;
+}
+
+.hero-rings {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.hero-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid var(--gold-line);
+  animation: breathe 6s ease-in-out infinite;
+}
+.hero-ring:nth-child(1) { width: 300px; height: 300px; animation-delay: 0s; opacity: 0.4; }
+.hero-ring:nth-child(2) { width: 500px; height: 500px; animation-delay: 0.8s; opacity: 0.25; }
+.hero-ring:nth-child(3) { width: 720px; height: 720px; animation-delay: 1.6s; opacity: 0.15; }
+.hero-ring:nth-child(4) { width: 960px; height: 960px; animation-delay: 2.4s; opacity: 0.08; }
+.hero-ring:nth-child(5) { width: 1200px; height: 1200px; animation-delay: 3.2s; opacity: 0.04; }
+
+@keyframes breathe {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: inherit; }
+  50% { transform: translate(-50%, -50%) scale(1.04); opacity: 0.6; }
+}
+
+.hero-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 300px;
+  background: radial-gradient(ellipse, rgba(201,169,106,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-inner { position: relative; z-index: 2; max-width: 860px; }
+
+.hero-eyebrow {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.32em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.6rem, 8vw, 7rem);
+  font-weight: 300;
+  line-height: 1.0;
+  color: var(--cream);
+  letter-spacing: -0.01em;
+  margin-bottom: 1.2rem;
+}
+
+.hero-title .accent-word {
+  font-style: italic;
+  color: var(--gold-light);
+}
+
+.hero-subtitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(0.88rem, 1.5vw, 1rem);
+  font-weight: 300;
+  color: var(--slate);
+  line-height: 1.8;
+  max-width: 640px;
+  margin: 0 auto 3rem;
+  letter-spacing: 0.02em;
+}
+
+.hero-divider {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(180deg, var(--gold-line), transparent);
+  margin: 0 auto 0;
+}
+
+/* ── FOUNDER'S THESIS ── */
+.thesis-section {
+  padding: 7rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.thesis-frame {
+  max-width: 720px;
+  width: 100%;
+  border: 1px solid var(--gold-line);
+  padding: 4rem 4.5rem;
+  position: relative;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(12,28,56,0.6), rgba(8,20,42,0.8));
+  box-shadow: 0 0 60px rgba(201,169,106,0.06), inset 0 0 60px rgba(0,0,0,0.3);
+}
+
+.thesis-frame::before,
+.thesis-frame::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-color: var(--gold);
+  border-style: solid;
+}
+.thesis-frame::before { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+.thesis-frame::after { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+
+.thesis-corners::before,
+.thesis-corners::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-color: var(--gold);
+  border-style: solid;
+}
+.thesis-corners::before { top: -1px; right: -1px; border-width: 2px 2px 0 0; }
+.thesis-corners::after { bottom: -1px; left: -1px; border-width: 0 0 2px 2px; }
+
+.thesis-statement {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-weight: 300;
+  line-height: 1.55;
+  color: var(--cream);
+  margin: 1.5rem 0;
+}
+
+.thesis-support {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--slate);
+  line-height: 1.8;
+  margin-top: 2rem;
+  font-style: italic;
+}
+
+/* ── PHILOSOPHY STRIP ── */
+.philosophy-strip {
+  padding: 5rem 2rem;
+  background: linear-gradient(180deg, transparent, rgba(15,39,79,0.4), transparent);
+  border-top: 1px solid rgba(201,169,106,0.12);
+  border-bottom: 1px solid rgba(201,169,106,0.12);
+  text-align: center;
+}
+
+.philosophy-line {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.65rem);
+  font-weight: 300;
+  color: var(--ivory);
+  line-height: 1.6;
+  margin: 0.6rem 0;
+}
+
+.philosophy-line.gold-italic {
+  font-style: italic;
+  color: var(--gold);
+  margin-top: 1.2rem;
+}
+
+/* ── IMAGE SECTION ── */
+.image-section {
+  padding: 9rem 2rem 9rem;
+  text-align: center;
+  position: relative;
+}
+
+.image-section::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 600px;
+  background: radial-gradient(ellipse, rgba(8,20,42,0.85) 0%, transparent 72%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.image-section-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.image-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 300;
+  color: var(--cream);
+  margin-bottom: 1rem;
+}
+
+.image-intro {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.93rem;
+  font-weight: 300;
+  color: var(--slate);
+  line-height: 1.85;
+  max-width: 580px;
+  margin: 0 auto 4.5rem;
+  letter-spacing: 0.01em;
+}
+
+.image-mount {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.image-mount::before {
+  content: '';
+  position: absolute;
+  inset: -40px;
+  background: radial-gradient(ellipse at center, rgba(4,10,22,0.7) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.image-frame {
+  position: relative;
+  border: 1px solid var(--gold-line);
+  padding: 1.8rem;
+  background: linear-gradient(160deg, rgba(10,22,46,0.85), rgba(6,14,30,0.95));
+  box-shadow:
+    0 32px 100px rgba(0,0,0,0.7),
+    0 0 60px rgba(0,0,0,0.5),
+    0 0 30px rgba(201,169,106,0.06),
+    inset 0 1px 0 rgba(201,169,106,0.08);
+  display: inline-block;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+}
+
+.image-frame::before,
+.image-frame::after {
+  content: '';
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-color: var(--gold);
+  border-style: solid;
+  z-index: 2;
+}
+.image-frame::before { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+.image-frame::after { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+
+.image-frame-corners::before,
+.image-frame-corners::after {
+  content: '';
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-color: var(--gold);
+  border-style: solid;
+  z-index: 2;
+}
+.image-frame-corners::before { top: -1px; right: -1px; border-width: 2px 2px 0 0; }
+.image-frame-corners::after { bottom: -1px; left: -1px; border-width: 0 0 2px 2px; }
+
+.image-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  background-color: #f5f3ef;
+}
+
+.image-caption {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: var(--slate);
+  line-height: 1.75;
+  margin-top: 2.5rem;
+  font-style: italic;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 0.01em;
+  opacity: 0.85;
+}
+
+/* ── COUNCIL CARDS ── */
+.cards-section {
+  padding: 7rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 300;
+  color: var(--cream);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-intro {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--slate);
+  line-height: 1.8;
+  max-width: 640px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.gemini-label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.gemini-label::before,
+.gemini-label::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 80px;
+  background: var(--gold-line);
+}
+
+.cards-gemini {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.cards-outer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.council-card {
+  background: var(--card);
+  border: 1px solid rgba(201,169,106,0.1);
+  padding: 2.5rem 2.2rem;
+  position: relative;
+  transition: transform 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+}
+
+.council-card:hover {
+  transform: translateY(-6px);
+  background: var(--card-hover);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+}
+
+.council-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: width 0.5s ease;
+}
+
+.council-card:hover::after { width: 100%; }
+
+.card-cfmehf::after { background: linear-gradient(90deg, var(--gold), #4a7fbd); }
+.card-siis::after { background: linear-gradient(90deg, var(--gold), #c9874a); }
+.card-reic::after { background: linear-gradient(90deg, #4a7fbd, #3a6aad); }
+.card-ops::after { background: linear-gradient(90deg, #3a7a5a, #4a8a6a); }
+.card-finance::after { background: linear-gradient(90deg, #6a7a8a, #8a9aaa); }
+
+.gemini-badge {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  border: 1px solid var(--gold-line);
+  padding: 0.2rem 0.5rem;
+}
+
+.card-role {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  color: var(--slate);
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+  display: block;
+}
+
+.card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.15rem, 1.8vw, 1.4rem);
+  font-weight: 400;
+  color: var(--cream);
+  line-height: 1.35;
+  margin-bottom: 1.2rem;
+}
+
+.card-desc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.87rem;
+  font-weight: 300;
+  color: var(--slate);
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  border: 1px solid var(--gold-soft);
+  padding: 0.25rem 0.6rem;
+  background: var(--gold-soft);
+}
+
+/* ── WHY THIS EXISTS ── */
+.why-section {
+  padding: 7rem 2rem;
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.why-lines { margin: 2.5rem 0 3rem; }
+
+.why-line {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.3rem, 2.8vw, 1.9rem);
+  font-weight: 300;
+  color: var(--ivory);
+  line-height: 1.6;
+  margin: 0.3rem 0;
+  transition: color 0.3s ease;
+  cursor: default;
+}
+
+.why-line:hover { color: var(--gold-light); }
+
+.why-body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--slate);
+  line-height: 1.85;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.why-body em {
+  color: var(--cream);
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* ── OPERATING PRINCIPLE ── */
+.operating-section {
+  padding: 7rem 2rem;
+  text-align: center;
+  position: relative;
+  background: linear-gradient(180deg, transparent, rgba(15,39,79,0.3), transparent);
+  border-top: 1px solid rgba(201,169,106,0.1);
+  border-bottom: 1px solid rgba(201,169,106,0.1);
+}
+
+.operating-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 400px;
+  background: radial-gradient(ellipse, rgba(201,169,106,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.operating-headline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4.5vw, 3.6rem);
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1.2;
+  max-width: 780px;
+  margin: 0 auto 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.operating-body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--slate);
+  line-height: 1.85;
+  max-width: 620px;
+  margin: 0 auto 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.operating-body em {
+  color: var(--cream);
+  font-style: normal;
+}
+
+/* ── ARCHITECTURE DIAGRAM ── */
+.arch-section {
+  padding: 8rem 2rem 9rem;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.arch-section .section-title { text-align: center; margin-bottom: 0.8rem; }
+
+.arch-section .section-intro {
+  max-width: 520px;
+  margin-bottom: 5rem;
+}
+
+.arch-diagram {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.arch-layer {
+  width: 100%;
+  max-width: 580px;
+  border: 1px solid rgba(201,169,106,0.22);
+  padding: 1.6rem 2.5rem;
+  text-align: center;
+  background: linear-gradient(160deg, rgba(11,22,46,0.75), rgba(7,14,30,0.85));
+  position: relative;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.arch-layer:hover {
+  border-color: rgba(201,169,106,0.42);
+  background: linear-gradient(160deg, rgba(13,26,54,0.88), rgba(9,18,38,0.9));
+}
+
+.arch-layer-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.3em;
+  color: rgba(201,169,106,0.4);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.arch-layer-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--cream);
+  letter-spacing: 0.01em;
+}
+
+.arch-layer-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.73rem;
+  font-weight: 300;
+  color: var(--slate);
+  margin-top: 0.35rem;
+  letter-spacing: 0.03em;
+  opacity: 0.8;
+}
+
+.arch-connector {
+  width: 1px;
+  height: 44px;
+  background: linear-gradient(180deg, rgba(201,169,106,0.3), rgba(201,169,106,0.08));
+  position: relative;
+  flex-shrink: 0;
+}
+
+.arch-connector::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 5px;
+  border-right: 1px solid rgba(201,169,106,0.4);
+  border-bottom: 1px solid rgba(201,169,106,0.4);
+  transform: translateX(-50%) rotate(45deg);
+  bottom: 2px;
+}
+
+.arch-gemini {
+  width: 100%;
+  max-width: 580px;
+  border: 1px solid var(--gold);
+  padding: 2.5rem 2.5rem 2rem;
+  text-align: center;
+  background: linear-gradient(160deg, rgba(14,32,66,0.95), rgba(8,18,40,0.98));
+  box-shadow:
+    0 0 60px rgba(201,169,106,0.12),
+    0 0 120px rgba(201,169,106,0.04),
+    inset 0 0 40px rgba(201,169,106,0.04);
+  position: relative;
+}
+
+.arch-gemini::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(201,169,106,0.08);
+  pointer-events: none;
+}
+
+.arch-gemini-eyebrow {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.32em;
+  color: rgba(201,169,106,0.55);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.arch-gemini-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--gold);
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
+}
+
+.arch-gemini-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: rgba(201,169,106,0.15);
+  border: 1px solid rgba(201,169,106,0.15);
+}
+
+.arch-gemini-cell {
+  padding: 1.2rem 1.2rem 1rem;
+  background: rgba(8,18,40,0.9);
+  transition: background 0.3s ease;
+}
+
+.arch-gemini-cell:hover {
+  background: rgba(12,24,50,0.95);
+}
+
+.arch-gemini-cell-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: var(--cream);
+  margin-bottom: 0.4rem;
+  line-height: 1.35;
+}
+
+.arch-gemini-cell-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  color: var(--slate);
+  letter-spacing: 0.01em;
+  opacity: 0.85;
+}
+
+.arch-gemini-note {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(122,142,168,0.7);
+  margin-top: 1.5rem;
+  letter-spacing: 0.01em;
+}
+
+.arch-bottom-chips {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 580px;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.arch-chip {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.22em;
+  color: rgba(201,169,106,0.6);
+  border: 1px solid rgba(201,169,106,0.14);
+  padding: 0.3rem 0.75rem;
+  background: rgba(201,169,106,0.05);
+  transition: color 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.arch-chip:hover {
+  color: var(--gold);
+  border-color: rgba(201,169,106,0.3);
+  background: rgba(201,169,106,0.1);
+}
+
+/* ── CLOSING ── */
+.closing-section {
+  padding: 9rem 2rem 7rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.closing-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 500px;
+  background: radial-gradient(ellipse, rgba(201,169,106,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.closing-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1.05;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.closing-lines {
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.closing-line {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 300;
+  color: var(--slate);
+  line-height: 1.9;
+}
+
+.closing-body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.93rem;
+  font-weight: 300;
+  color: var(--slate);
+  line-height: 1.85;
+  max-width: 580px;
+  margin: 0 auto 3.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.closing-italic {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+  font-style: italic;
+  color: var(--gold);
+  font-weight: 300;
+  margin-bottom: 3.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.closing-mark {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.3em;
+  color: var(--gold-line);
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .thesis-frame { padding: 2.5rem 2rem; }
+  .cards-gemini, .cards-outer { grid-template-columns: 1fr; }
+  .arch-gemini-inner { grid-template-columns: 1fr; }
+  .hero-ring:nth-child(3),
+  .hero-ring:nth-child(4),
+  .hero-ring:nth-child(5) { display: none; }
+}
+
+@media (max-width: 1024px) {
+  .cards-outer { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .cards-outer { grid-template-columns: 1fr; }
+}
+
+/* ── WHY THIS CHANGES EVERYTHING ── */
+.why-changes-section {
+  padding: 7rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.why-changes-inner {
+  max-width: 760px;
+  width: 100%;
+}
+
+.why-changes-body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1.9;
+  letter-spacing: 0.01em;
+}
+
+/* ── HISTORICAL CONTEXT ── */
+.historical-section {
+  padding: 5rem 2rem;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(180deg, transparent, rgba(15,39,79,0.3), transparent);
+}
+
+.historical-inner {
+  max-width: 760px;
+  width: 100%;
+  border-left: 2px solid var(--gold-line);
+  padding-left: 2.5rem;
+}
+
+.historical-body {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--ivory);
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+}
+
+/* ── STRUCTURAL DISTINCTION ── */
+.structural-section {
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.structural-inner {
+  max-width: 760px;
+  width: 100%;
+}
+
+.structural-body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(0.93rem, 1.5vw, 1.05rem);
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1.9;
+  letter-spacing: 0.01em;
+}
+
+/* ── GEMINI CONTEXT ── */
+.gemini-context {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--slate);
+  line-height: 1.85;
+  max-width: 680px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+/* ── CLEC card accent ── */
+.card-clec {
+  border-color: rgba(201,169,106,0.22);
+  background: linear-gradient(160deg, rgba(74,50,8,0.18), rgba(12,28,56,0.6));
+}
+
+.card-clec:hover {
+  border-color: rgba(201,169,106,0.45);
+  background: linear-gradient(160deg, rgba(90,64,12,0.25), rgba(14,32,66,0.75));
+}
+
+/* ── GLOBAL IMPLICATION ── */
+.global-section {
+  padding: 7rem 2rem;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(180deg, transparent, rgba(15,39,79,0.35), transparent);
+}
+
+.global-inner {
+  max-width: 760px;
+  width: 100%;
+}
+
+.global-body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(0.93rem, 1.5vw, 1.05rem);
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1.9;
+  letter-spacing: 0.01em;
+}
+
+
+/* ── FOUNDING LOGIC ── */
+.founding-section {
+  padding: 7rem 2rem;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(180deg, transparent, rgba(11,30,61,0.5), transparent);
+}
+
+.founding-inner {
+  max-width: 760px;
+  width: 100%;
+}
+
+.founding-headline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--gold-light);
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  letter-spacing: -0.01em;
+}
+
+.founding-body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(0.95rem, 1.6vw, 1.08rem);
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1.9;
+  letter-spacing: 0.01em;
+}
+
+
+/* ── ARCH NARRATIVE ── */
+.arch-narrative {
+  max-width: 760px;
+  margin: 2rem auto 0;
+  padding: 0 1rem;
+}
+
+.arch-para {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(0.93rem, 1.5vw, 1.05rem);
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1.9;
+  letter-spacing: 0.01em;
+  margin-bottom: 1.8rem;
+}
+
+.arch-closing-line {
+  border-top: 1px solid var(--gold-line);
+  padding-top: 1.8rem;
+  margin-top: 0.5rem;
+  color: var(--ivory);
+}
+
+
+/* ── TRILOGY FOOTER NAVIGATION ── */
+.trilogy-nav {
+  background: var(--deep);
+  border-top: 1px solid var(--gold-line);
+  padding: 5rem 2rem 4rem;
+  position: relative;
+}
+.trilogy-nav::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%; transform: translateX(-50%);
+  width: 80%; max-width: 800px; height: 1px;
+  background: linear-gradient(to right, transparent, rgba(201,169,106,0.4), transparent);
+}
+.trilogy-nav-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.trilogy-nav-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.trilogy-nav-eyebrow {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.32em;
+  color: var(--gold);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+.trilogy-nav-title {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+  font-weight: 400;
+  color: var(--cream);
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+}
+.trilogy-nav-rule {
+  width: 48px;
+  height: 1px;
+  background: var(--gold-line);
+  margin: 1.25rem auto 0;
+}
+.trilogy-nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem;
+}
+@media (max-width: 680px) {
+  .trilogy-nav-grid {
+    grid-template-columns: 1fr;
+  }
+  .trilogy-nav {
+    padding: 3.5rem 1.25rem 3rem;
+  }
+}
+.trilogy-nav-card {
+  display: block;
+  text-decoration: none;
+  background: var(--card, #0c1c38);
+  border: 1px solid var(--gold-line);
+  border-radius: 4px;
+  padding: 2.25rem 2rem;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+  overflow: hidden;
+}
+.trilogy-nav-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.trilogy-nav-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.4), 0 0 0 1px rgba(201,169,106,0.25);
+  border-color: rgba(201,169,106,0.5);
+  background: var(--card-hover, #0e2042);
+}
+.trilogy-nav-card:hover::before {
+  opacity: 1;
+}
+.trilogy-card-eyebrow {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.9rem;
+}
+.trilogy-card-headline {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  font-weight: 500;
+  color: var(--cream);
+  line-height: 1.35;
+  margin-bottom: 0.85rem;
+  letter-spacing: 0.01em;
+}
+.trilogy-card-body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: var(--slate, #7a8ea8);
+  line-height: 1.65;
+  margin-bottom: 1.4rem;
+}
+.trilogy-card-arrow {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  color: var(--gold);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: gap 0.25s ease;
+}
+.trilogy-nav-card:hover .trilogy-card-arrow {
+  gap: 0.75rem;
+}
+.trilogy-card-arrow::after {
+  content: '→';
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-rings">
+    <div class="hero-ring"></div>
+    <div class="hero-ring"></div>
+    <div class="hero-ring"></div>
+    <div class="hero-ring"></div>
+    <div class="hero-ring"></div>
+  </div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow reveal visible">Awareness365 · Risk-Assessed Operating Framework</div>
+    <h1 class="hero-title reveal reveal-delay-1 visible">
+      The Awareness365<br>
+      Council<br>
+      <span class="accent-word">Governance Architecture</span>
+    </h1>
+    <p class="hero-subtitle reveal reveal-delay-2 visible">
+      Every day, a person in a low-resource community receives a health message they cannot understand, does not trust, or cannot act on — and a system somewhere counts it as a successful delivery. Awareness365 was built to make that gap impossible to ignore. This document describes the governance architecture designed to close it.
+    </p>
+    <div class="hero-divider reveal reveal-delay-3 visible"></div>
+  </div>
+</section>
+
+<div class="gold-line-full"></div>
+
+<!-- FOUNDER'S THESIS -->
+<section class="thesis-section">
+  <div class="thesis-frame thesis-corners reveal visible">
+    <span class="eyebrow">Founder's Thesis</span>
+    <div class="gold-line-h"></div>
+    <p class="thesis-statement">
+      Awareness365 was built on a simple principle.<br>
+      Technology may scale information.<br>
+      Only governance can scale trust.
+    </p>
+    <p class="thesis-support">
+      Before a system can reach the world, it must prove that it knows how to protect the people it hopes to serve.
+    </p>
+    <p class="thesis-support" style="margin-top:1.5rem;font-style:normal;color:var(--gold);letter-spacing:0.04em;">Without governance, scale becomes risk.</p>
+  </div>
+</section>
+
+<div class="gold-line-full"></div>
+
+<!-- FOUNDING LOGIC -->
+<section class="founding-section">
+  <div class="founding-inner">
+    <span class="eyebrow reveal visible">The Founding Logic</span>
+    <h2 class="founding-headline reveal reveal-delay-1 visible">Seen. Heard. Understood.</h2>
+    <p class="founding-body reveal reveal-delay-2 visible">
+      The Testing Saves Lives Project was founded after a direct encounter with a system failure that most public health institutions do not measure: a person received accurate information and still could not act on it. Not because the information was wrong. Because it was not understood in the way understanding produces action. That encounter produced a question that drove the design of Awareness365: what would it take to build a system that does not just deliver health information, but ensures it is understood — culturally, linguistically, and with enough human trust to change behavior? The answer required more than technology. It required governance.
+    </p>
+  </div>
+</section>
+
+<div class="gold-line-full"></div>
+
+<!-- WHY THIS CHANGES EVERYTHING -->
+<section class="why-changes-section">
+  <div class="why-changes-inner">
+    <span class="eyebrow reveal visible">Why This Architecture Changes Everything</span>
+    <p class="why-changes-body reveal reveal-delay-1 visible">
+      Awareness365 was built around a simple recognition: the world is entering an era in which health information, AI-mediated guidance, and civic signals will reach billions of people through digital systems long before institutions have solved the problem of comprehension. Information can scale instantly. Trust cannot. Comprehension cannot. And without governance structures designed for language, culture, lived experience, and ethical oversight, even well-intentioned systems can amplify misunderstanding at planetary scale. The Awareness365 architecture exists to solve that upstream problem. It creates a governance framework where ethics, survivor oversight, research integrity, regulatory discipline, and community-authored language guidance operate together before information reaches the public.
+    </p>
+  </div>
+</section>
+
+<div class="gold-line-full"></div>
+
+<!-- HISTORICAL CONTEXT -->
+<section class="historical-section">
+  <div class="historical-inner">
+    <p class="historical-body reveal reveal-delay-1 visible">
+      History shows that every era of large-scale information expansion eventually requires new forms of institutional architecture. The printing press produced editorial standards. Global finance produced regulatory systems. The modern internet produced cybersecurity frameworks. As AI-mediated health and civic information begins reaching billions of people across languages, cultures, and levels of health literacy, a similar transition is emerging. Systems capable of distributing information at planetary scale will increasingly require governance structures capable of protecting comprehension, trust, and ethical integrity. The Awareness365 council architecture is a direct attempt to define what that governance infrastructure must look like — and to build it before the systems that require it are already operating at scale. If systems capable of delivering health information to billions are now emerging, governance systems capable of protecting comprehension, trust, and ethical integrity must emerge alongside them. The Awareness365 architecture represents one attempt to define that structure.
+    </p>
+  </div>
+</section>
+
+<div class="gold-line-full"></div>
+
+<!-- PHILOSOPHY STRIP -->
+<section class="philosophy-strip">
+  <div class="reveal visible">
+    <p class="philosophy-line">Innovation without governance accelerates risk.</p>
+    <p class="philosophy-line">Governance without lived experience erodes trust.</p>
+    <p class="philosophy-line gold-italic">Awareness365 was designed so neither can occur.</p>
+  </div>
+</section>
+
+<div class="gold-line-full"></div>
+
+<!-- GOVERNANCE IMAGE -->
+<section class="image-section">
+  <div class="image-section-inner">
+    <span class="eyebrow reveal visible">The Architecture</span>
+    <h2 class="image-title reveal reveal-delay-1 visible">The Five Councils Around the Ethical Core</h2>
+    <p class="image-intro reveal reveal-delay-2 visible">
+      At the center of Awareness365 sits a dual ethical structure. Around it, three additional oversight bodies ensure research integrity, regulatory discipline, and community-authored language governance.
+    </p>
+    <div class="image-mount">
+    <div class="image-frame image-frame-corners reveal reveal-delay-3 visible">
+      <svg viewBox="0 0 960 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Awareness365 Governance and Ethical Oversight Framework" style="width:100%;height:auto;display:block;">
+  <defs>
+
+    <!-- Backgrounds -->
+    <radialgradient id="bg" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#0e2548"></stop>
+      <stop offset="100%" stop-color="#060f1e"></stop>
+    </radialgradient>
+
+    <!-- Gemini Core ambient glow -->
+    <radialgradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c9a96a" stop-opacity="0.12"></stop>
+      <stop offset="100%" stop-color="#c9a96a" stop-opacity="0"></stop>
+    </radialgradient>
+
+    <!-- CFMEHF left half — deep navy -->
+    <lineargradient id="cfmFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f3d74"></stop>
+      <stop offset="100%" stop-color="#0c1e42"></stop>
+    </lineargradient>
+
+    <!-- SIIS right half — rich gold-bronze -->
+    <lineargradient id="siisFill" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9a7820"></stop>
+      <stop offset="100%" stop-color="#5c460c"></stop>
+    </lineargradient>
+
+    <!-- REIC — deep royal navy -->
+    <radialgradient id="reicFill" cx="40%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#1e3d72"></stop>
+      <stop offset="100%" stop-color="#0c1c3a"></stop>
+    </radialgradient>
+
+    <!-- OCC — deep forest green -->
+    <radialgradient id="occFill" cx="40%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#1a4030"></stop>
+      <stop offset="100%" stop-color="#0b1e16"></stop>
+    </radialgradient>
+
+    <!-- CLEC — warm dark gold -->
+    <radialgradient id="clecFill" cx="50%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#8a6014"></stop>
+      <stop offset="100%" stop-color="#4a3208"></stop>
+    </radialgradient>
+
+    <!-- Drop shadows -->
+    <filter id="shadowLg" x="-30%" y="-30%" width="160%" height="160%">
+      <fedropshadow dx="0" dy="6" stdDeviation="18" flood-color="#000" flood-opacity="0.55"></fedropshadow>
+    </filter>
+    <filter id="shadowMd" x="-30%" y="-30%" width="160%" height="160%">
+      <fedropshadow dx="0" dy="4" stdDeviation="12" flood-color="#000" flood-opacity="0.45"></fedropshadow>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arr" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+      <path d="M0,0.5 L0,6.5 L6.5,3.5 z" fill="rgba(201,169,106,0.58)"></path>
+    </marker>
+
+  </defs>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- BACKGROUND                                   -->
+  <!-- ════════════════════════════════════════════ -->
+  <rect width="960" height="760" fill="url(#bg)"></rect>
+  <ellipse cx="480" cy="390" rx="340" ry="260" fill="rgba(201,169,106,0.04)"></ellipse>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- TITLE BLOCK                                  -->
+  <!-- ════════════════════════════════════════════ -->
+  <text x="480" y="44" text-anchor="middle" font-family="&#39;Cormorant Garamond&#39;, Garamond, Georgia, serif" font-size="24" font-weight="400" letter-spacing="0.4" fill="#f2efe8">
+    Awareness365 Governance &amp; Ethical Oversight Framework
+  </text>
+  <line x1="300" y1="55" x2="660" y2="55" stroke="rgba(201,169,106,0.38)" stroke-width="0.8"></line>
+  <text x="480" y="72" text-anchor="middle" font-family="&#39;DM Sans&#39;, Arial, sans-serif" font-size="10" font-weight="300" letter-spacing="3.2" fill="#7a8ea8">
+    RISK-ASSESSED OPERATING FRAMEWORK
+  </text>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- CONNECTOR LINES (behind circles)             -->
+  <!-- Core: cx=480, cy=400, r=150                  -->
+  <!-- REIC cx=190,cy=230  OCC cx=770,cy=230        -->
+  <!-- CLEC cx=480,cy=668                           -->
+  <!-- ════════════════════════════════════════════ -->
+
+  <!-- REIC → Core boundary -->
+  <line x1="272" y1="276" x2="352" y2="317" stroke="rgba(201,169,106,0.42)" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#arr)"></line>
+
+  <!-- OCC → Core boundary -->
+  <line x1="688" y1="276" x2="608" y2="317" stroke="rgba(201,169,106,0.42)" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#arr)"></line>
+
+  <!-- CLEC → Core bottom -->
+  <line x1="480" y1="573" x2="480" y2="552" stroke="rgba(201,169,106,0.42)" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#arr)"></line>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- HALO RINGS                                   -->
+  <!-- Core cx=480, cy=400, r=150                   -->
+  <!-- ════════════════════════════════════════════ -->
+
+  <circle cx="480" cy="400" r="186" fill="none" stroke="rgba(201,169,106,0.07)" stroke-width="6"></circle>
+
+  <circle cx="480" cy="400" r="172" fill="none" stroke="rgba(201,169,106,0.32)" stroke-width="1.4" stroke-dasharray="3 8"></circle>
+
+  <circle cx="480" cy="400" r="164" fill="none" stroke="rgba(201,169,106,0.10)" stroke-width="1.5"></circle>
+
+  <circle cx="480" cy="400" r="153" fill="url(#coreGlow)"></circle>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- GEMINI CORE — SPLIT CIRCLE r=150            -->
+  <!-- Top: (480,250)  Bottom: (480,550)            -->
+  <!-- ════════════════════════════════════════════ -->
+
+  <!-- Left half — CFMEHF -->
+  <path d="M480,250 A150,150 0 0,0 480,550 Z" fill="url(#cfmFill)" filter="url(#shadowLg)"></path>
+
+  <!-- Right half — SIIS -->
+  <path d="M480,250 A150,150 0 0,1 480,550 Z" fill="url(#siisFill)" filter="url(#shadowLg)"></path>
+
+  <!-- Border rings -->
+  <circle cx="480" cy="400" r="150" fill="none" stroke="#c9a96a" stroke-width="1.8"></circle>
+  <circle cx="480" cy="400" r="144" fill="none" stroke="rgba(201,169,106,0.14)" stroke-width="0.8"></circle>
+
+  <!-- Vertical divider -->
+  <line x1="480" y1="250" x2="480" y2="550" stroke="rgba(201,169,106,0.48)" stroke-width="1.1"></line>
+
+  <!-- ── GEMINI CORE LABEL — halo band ── -->
+  <!-- Sits between halo top (400−172=228) and circle top (250) → y=240 -->
+  <text x="480" y="240" text-anchor="middle" font-family="&#39;Cormorant Garamond&#39;, Garamond, Georgia, serif" font-size="14.5" font-weight="400" font-style="italic" letter-spacing="2" fill="#c9a96a">
+    Gemini Ethical Core
+  </text>
+
+  <!-- ── CFMEHF TEXT — left half ── -->
+  <!-- Half center: x≈405, cy=400 -->
+  <!-- Text block total ≈92px, center at 396 -->
+  <!-- Name lines: 358, 373, 387  Rule: 396  Function: 410, 422, 434 -->
+  <text x="406" y="358" text-anchor="middle" font-family="&#39;Cormorant Garamond&#39;, Garamond, Georgia, serif" font-size="11.5" font-weight="700" fill="#f2efe8" letter-spacing="0.1">
+    Council for
+  </text>
+  <text x="406" y="374" text-anchor="middle" font-family="&#39;Cormorant Garamond&#39;, Garamond, Georgia, serif" font-size="11.5" font-weight="700" fill="#f2efe8" letter-spacing="0.1">
+    Medical Ethics
+  </text>
+  <text x="406" y="389" text-anchor="middle" font-family="&#39;Cormorant Garamond&#39;, Garamond, Georgia, serif" font-size="10" font-weight="400" fill="#ede8de" letter-spacing="0.1">
+    &amp; the Human Future
+  </text>
+
+  <line x1="352" y1="398" x2="458" y2="398" stroke="rgba(201,169,106,0.30)" stroke-width="0.7"></line>
+
+  <text x="406" y="413" text-anchor="middle" font-family="&#39;DM Sans&#39;, Arial, sans-serif" font-size="8" font-weight="300" fill="rgba(242,239,232,0.55)" letter-spacing="0.2">
+    Clinical Ethics +
+  </text>
+  <text x="406" y="426" text-anchor="middle" font-family="&#39;DM Sans&#39;, Arial, sans-serif" font-size="8" font-weight="300" fill="rgba(242,239,232,0.55)" letter-spacing="0.2">
+    Lived-Experience
+  </text>
+  <text x="406" y="439" text-anchor="middle" font-family="&#39;DM Sans&#39;, Arial, sans-serif" font-size="8" font-weight="300" fill="rgba(242,239,232,0.55)" letter-spacing="0.2">
+    Governance
+  </text>
+
+  <!-- ── SIIS TEXT — right half ── -->
+  <!-- Half center: x≈555, same vertical rhythm -->
+  <text x="554" y="355" text-anchor="middle" font-family="&#39;Cormorant Garamond&#39;, Garamond, Georgia, serif" font-size="11.5" font-weight="700" fill="#f2efe8" letter-spacing="0.1">
+    Survivor Impact
+  </text>
+  <text x="554" y="371" text-anchor="middle" font-family="&#39;Cormorant Garamond&#39;, Garamond, Georgia, serif" font-size="11.5" font-weight="700" fill="#f2efe8" letter-spacing="0.1">
+    &amp; Integrity System
+  </text>
+  <text x="554" y="386" text-anchor="middle" font-family="&#39;Cormorant Garamond&#39;, Garamond, Georgia, serif" font-size="10" font-weight="400" fill="#ede8de" letter-spacing="0.1">
+    Council (SIIS)
+  </text>
+
+  <line x1="504" y1="395" x2="606" y2="395" stroke="rgba(201,169,106,0.30)" stroke-width="0.7"></line>
+
+  <text x="554" y="410" text-anchor="middle" font-family="&#39;DM Sans&#39;, Arial, sans-serif" font-size="8" font-weight="300" fill="rgba(242,239,232,0.55)" letter-spacing="0.2">
+    Clinical Ethics +
+  </text>
+  <text x="554" y="423" text-anchor="middle" font-family="&#39;DM Sans&#39;, Arial, sans-serif" font-size="8" font-weight="300" fill="rgba(242,239,232,0.55)" letter-spacing="0.2">
+    Lived-Experience
+  </text>
+  <text x="554" y="436" text-anchor="middle" font-family="&#39;DM Sans&#39;, Arial, sans-serif" font-size="8" font-weight="300" fill="rgba(242,239,232,0.55)" letter-spacing="0.2">
+    Governance
+  </text>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- REIC — TOP LEFT  cx=190, cy=230, r=95        -->
+  <!-- Text zone: ±60px from center                 -->
+  <!-- ════════════════════════════════════════════ -->
+
+  <circle cx="190" cy="230" r="95" fill="url(#reicFill)" filter="url(#shadowMd)"></circle>
+  <circle cx="190" cy="230" r="95" fill="none" stroke="#1e4a8a" stroke-width="1.8"></circle>
+  <circle cx="190" cy="230" r="89" fill="none" stroke="rgba(201,169,106,0.18)" stroke-width="0.8"></circle>
+
+  <text x="190" y="200" text-anchor="middle" font-family="&#39;Cormorant Garamond&#39;, Garamond, Georgia, serif" font-size="12" font-weight="700" fill="#f2efe8" letter-spacing="0.1">
+    Research Ethics
+  </text>
+  <text x="190" y="216" text-anchor="middle" font-family="&#39;Cormorant Garamond&#39;, Garamond, Georgia, serif" font-size="12" font-weight="700" fill="#f2efe8" letter-spacing="0.1">
+    &amp; Integrity Council
+  </text>
+  <text x="190" y="232" text-anchor="middle" font-family="&#39;DM Sans&#39;, Arial, sans-serif" font-size="11" font-weight="400" fill="#c9a96a" letter-spacing="1.2">
+    (REIC)
+  </text>
+
+  <line x1="128" y1="241" x2="252" y2="241" stroke="rgba(201,169,106,0.30)" stroke-width="0.7"></line>
+
+  <text x="190" y="256" text-anchor="middle" font-family="&#39;DM Sans&#39;, Arial, sans-serif" font-size="9" font-weight="300" fill="#7a8ea8" letter-spacing="0.2">
+    Safeguarding Research
+  </text>
+  <text x="190" y="270" text-anchor="middle" font-family="&#39;DM Sans&#39;, Arial, sans-serif" font-size="9" font-weight="300" fill="#7a8ea8" letter-spacing="0.2">
+    Standards
+  </text>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- OCC — TOP RIGHT  cx=770, cy=230, r=95        -->
+  <!-- ════════════════════════════════════════════ -->
+
+  <circle cx="770" cy="230" r="95" fill="url(#occFill)" filter="url(#shadowMd)"></circle>
+  <circle cx="770" cy="230" r="95" fill="none" stroke="#1a4a2e" stroke-width="1.8"></circle>
+  <circle cx="770" cy="230" r="89" fill="none" stroke="rgba(201,169,106,0.18)" stroke-width="0.8"></circle>
+
+  <text x="770" y="200" text-anchor="middle" font-family="&#39;Cormorant Garamond&#39;, Garamond, Georgia, serif" font-size="12" font-weight="700" fill="#f2efe8" letter-spacing="0.1">
+    Operations &amp;
+  </text>
+  <text x="770" y="216" text-anchor="middle" font-family="&#39;Cormorant Garamond&#39;, Garamond, Georgia, serif" font-size="12" font-weight="700" fill="#f2efe8" letter-spacing="0.1">
+    Compliance Council
+  </text>
+  <text x="770" y="232" text-anchor="middle" font-family="&#39;DM Sans&#39;, Arial, sans-serif" font-size="11" font-weight="400" fill="#c9a96a" letter-spacing="1.2">
+    (OCC)
+  </text>
+
+  <line x1="708" y1="241" x2="832" y2="241" stroke="rgba(201,169,106,0.30)" stroke-width="0.7"></line>
+
+  <text x="770" y="256" text-anchor="middle" font-family="&#39;DM Sans&#39;, Arial, sans-serif" font-size="9" font-weight="300" fill="#7a8ea8" letter-spacing="0.2">
+    Ensuring Regulatory
+  </text>
+  <text x="770" y="270" text-anchor="middle" font-family="&#39;DM Sans&#39;, Arial, sans-serif" font-size="9" font-weight="300" fill="#7a8ea8" letter-spacing="0.2">
+    Discipline
+  </text>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- CLEC — BOTTOM CENTER  cx=480, cy=668, r=95   -->
+  <!-- Core bottom y=550; CLEC top y=573            -->
+  <!-- Gap = 23px — clean breathing room            -->
+  <!-- ════════════════════════════════════════════ -->
+
+  <circle cx="480" cy="668" r="95" fill="url(#clecFill)" filter="url(#shadowMd)"></circle>
+  <circle cx="480" cy="668" r="95" fill="none" stroke="#8a6010" stroke-width="1.8"></circle>
+  <circle cx="480" cy="668" r="89" fill="none" stroke="rgba(201,169,106,0.18)" stroke-width="0.8"></circle>
+
+  <text x="480" y="638" text-anchor="middle" font-family="&#39;Cormorant Garamond&#39;, Garamond, Georgia, serif" font-size="12" font-weight="700" fill="#f2efe8" letter-spacing="0.1">
+    Cultural Language
+  </text>
+  <text x="480" y="654" text-anchor="middle" font-family="&#39;Cormorant Garamond&#39;, Garamond, Georgia, serif" font-size="12" font-weight="700" fill="#f2efe8" letter-spacing="0.1">
+    Envoy Council
+  </text>
+  <text x="480" y="670" text-anchor="middle" font-family="&#39;DM Sans&#39;, Arial, sans-serif" font-size="11" font-weight="400" fill="#c9a96a" letter-spacing="1.2">
+    (CLEC)
+  </text>
+
+  <line x1="418" y1="679" x2="542" y2="679" stroke="rgba(201,169,106,0.30)" stroke-width="0.7"></line>
+
+  <text x="480" y="694" text-anchor="middle" font-family="&#39;DM Sans&#39;, Arial, sans-serif" font-size="9" font-weight="300" fill="#7a8ea8" letter-spacing="0.2">
+    Community-Authored
+  </text>
+  <text x="480" y="708" text-anchor="middle" font-family="&#39;DM Sans&#39;, Arial, sans-serif" font-size="9" font-weight="300" fill="#7a8ea8" letter-spacing="0.2">
+    Language Governance
+  </text>
+
+</svg>
+    </div>
+    </div>
+    <p class="image-caption reveal reveal-delay-4 visible">
+      The Awareness365 council system operates as a layered trust architecture whose center of gravity is the Gemini Ethical Core, where clinical ethics and lived experience oversight align before public deployment.
+    </p>
+  </div>
+</section>
+
+<div class="gold-line-full"></div>
+
+<!-- STRUCTURAL DISTINCTION -->
+<section class="structural-section">
+  <div class="structural-inner">
+    <p class="structural-body reveal reveal-delay-1 visible">
+      Unlike traditional advisory boards or nonprofit governance models, the Awareness365 system distributes authority across independent oversight bodies with defined domains of responsibility. Ethical review, survivor oversight, research integrity, compliance discipline, and cultural language governance are not symbolic functions. They are operational safeguards embedded into the infrastructure itself. Each council protects a different dimension of public trust, ensuring that the system cannot scale without passing through multiple layers of scrutiny.
+    </p>
+  </div>
+</section>
+
+<div class="gold-line-full"></div>
+
+<!-- COUNCIL CARDS -->
+<section class="cards-section">
+  <span class="eyebrow" style="text-align:center;display:block;">The Councils</span>
+  <h2 class="section-title reveal reveal-delay-1 visible">Five Bodies. One Operating Logic.</h2>
+  <p class="section-intro reveal reveal-delay-2 visible">
+    Awareness365 does not rely on a single advisory layer. It is structured through five distinct councils — each with a defined mandate — to ensure that ethics, lived experience, research integrity, regulatory compliance, and cultural language governance are embedded before the system is permitted to scale.
+  </p>
+
+  <div class="gemini-label reveal visible">The Gemini Ethical Core</div>
+
+  <p class="gemini-context reveal reveal-delay-1 visible">
+    At the center of the architecture sits the Gemini Ethical Core, a dual structure that unites clinical ethics with survivor-led lived-experience oversight. This pairing ensures that decisions are never evaluated solely through institutional or academic perspectives. Every major decision is examined through both professional ethical frameworks and the lived realities of those most affected by health systems.
+  </p>
+
+  <div class="cards-gemini">
+    <!-- CFMEHF -->
+    <div class="council-card card-cfmehf reveal reveal-delay-1 visible">
+      <div class="gemini-badge">Gemini Core</div>
+      <span class="card-role">Clinical Ethics Oversight</span>
+      <h3 class="card-title">Council for Medical Ethics &amp; the Human Future</h3>
+      <p class="card-desc">The CFMEHF ensures that medical framing, clinical guidance, and long-horizon implications of the system remain aligned with professional ethical standards before deployment or scale. This council reviews content frameworks, flags clinical risk, and holds formal approval authority over any messaging that carries diagnostic or treatment-adjacent guidance.</p>
+      <div class="card-tags">
+        <span class="tag">Clinical Ethics</span>
+        <span class="tag">Professional Standards</span>
+        <span class="tag">Long-Horizon Risk</span>
+      </div>
+    </div>
+
+    <!-- SIIS -->
+    <div class="council-card card-siis reveal reveal-delay-2 visible">
+      <div class="gemini-badge">Gemini Core</div>
+      <span class="card-role">Lived-Experience Governance</span>
+      <h3 class="card-title">Survivor Impact &amp; Integrity System Council (SIIS)</h3>
+      <p class="card-desc">SIIS embeds survivor and patient reality directly into the institutional trust structure, ensuring the system respects vulnerability, emotional clarity, cultural silence, and the lived realities of illness. This council operates through structured survivor review panels and holds co-equal standing with the CFMEHF on any content or design decision that affects people living with or beyond a diagnosis.</p>
+      <div class="card-tags">
+        <span class="tag">Survivor Governance</span>
+        <span class="tag">Human Trust Layer</span>
+        <span class="tag">Cultural Intelligence</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="gold-line-full" style="max-width:640px;margin:0 auto 2.5rem;opacity:0.5;"></div>
+
+  <div class="cards-outer">
+    <!-- REIC -->
+    <div class="council-card card-reic reveal reveal-delay-1 visible">
+      <span class="card-role">Research Integrity Oversight</span>
+      <h3 class="card-title">Research Ethics &amp; Integrity Council</h3>
+      <p class="card-desc">REIC protects research design, consent structures, methodology, and publication integrity so that Awareness365 remains accountable not only in deployment, but in evidence generation. This council reviews all study protocols and data use agreements before activation, and requires independent methodological sign-off before any research findings are published or cited in system communications.</p>
+      <div class="card-tags">
+        <span class="tag">Research Design</span>
+        <span class="tag">Consent Frameworks</span>
+        <span class="tag">Publication Integrity</span>
+      </div>
+    </div>
+
+    <!-- OPS -->
+    <div class="council-card card-ops reveal reveal-delay-2 visible">
+      <span class="card-role">Regulatory and Operational Discipline</span>
+      <h3 class="card-title">Operations &amp; Compliance Council</h3>
+      <p class="card-desc">This council ensures cross-border regulatory alignment, GDPR readiness, operational controls, and disciplined implementation as the infrastructure moves across jurisdictions and languages. It conducts pre-deployment regulatory assessments for each new market, maintains a live compliance register, and holds authority to pause deployment in any jurisdiction where legal or operational conditions are not met.</p>
+      <div class="card-tags">
+        <span class="tag">GDPR</span>
+        <span class="tag">Regulatory Alignment</span>
+        <span class="tag">Operational Accountability</span>
+      </div>
+    </div>
+
+    <!-- CLEC -->
+    <div class="council-card card-clec reveal reveal-delay-3 visible">
+      <span class="card-role">Community Language &amp; Cultural Governance</span>
+      <h3 class="card-title">Cultural Language Envoy Council</h3>
+      <p class="card-desc">The Cultural Language Envoy Council governs the linguistic and cultural integrity of all system communications. Its mandate is grounded in a structural principle: comprehension is not a translation problem — it is a governance problem. This council reviews all language assets through community-embedded cultural review processes, maintains authority over the approval of new language deployments, and holds standing to require redesign of any communication that fails community intelligibility standards.</p>
+      <div class="card-tags">
+        <span class="tag">Community-Authored Language</span>
+        <span class="tag">Cultural Mediation</span>
+        <span class="tag">Comprehension as Safety</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="gold-line-full"></div>
+
+<!-- WHY THIS EXISTS -->
+<section class="why-section">
+  <span class="eyebrow reveal visible">Why This Exists</span>
+  <div class="why-lines reveal reveal-delay-1 visible">
+    <p class="why-line">Because language alone does not create trust.</p>
+    <p class="why-line">Because translation alone does not prevent harm.</p>
+    <p class="why-line">Because scale without oversight multiplies risk.</p>
+    <p class="why-line">Because lived experience must sit beside formal ethics.</p>
+    <p class="why-line">Because people should never be the final quality check on systems built to reach them.</p>
+  </div>
+  <p class="why-body reveal reveal-delay-2 visible">
+    Awareness365 was designed as a <em>Risk-Assessed Operating Framework</em> so that accountability is not an afterthought, not a decorative advisory layer, and not a downstream repair mechanism. It is built into the operating logic from the beginning.
+  </p>
+</section>
+
+<div class="gold-line-full"></div>
+
+<!-- OPERATING PRINCIPLE -->
+<section class="operating-section">
+  <div class="operating-glow"></div>
+  <span class="eyebrow reveal visible">The Operating Principle</span>
+  <h2 class="operating-headline reveal reveal-delay-1 visible">
+    Trust must be structured before technology is allowed to move at speed.
+  </h2>
+  <p class="operating-body reveal reveal-delay-2 visible">
+    Awareness365 was not designed as a conventional app, chatbot, or engagement campaign. It was designed as structured civic infrastructure. Its operating premise is simple: if language, health messaging, cultural context, and human vulnerability intersect inside one system, then ethics, survivor oversight, research discipline, compliance, and cultural language governance must be present from the beginning — not added later.
+  </p>
+  <p class="operating-body reveal reveal-delay-3 visible">
+    That is why Awareness365 operates through a layered <em>Risk-Assessed Operating Framework</em> rather than a single advisory board or a generic statement of intent.
+  </p>
+</section>
+
+<div class="gold-line-full"></div>
+
+<!-- ARCHITECTURE DIAGRAM -->
+<section class="arch-section">
+  <span class="eyebrow" style="text-align:center;display:block;">System Logic</span>
+  <h2 class="section-title reveal reveal-delay-1 visible">How the Oversight Layers Work Together</h2>
+  <div class="arch-narrative reveal reveal-delay-2 visible">
+
+    <p class="arch-para">The Awareness365 governance system is designed as a layered trust architecture rather than a traditional hierarchy of authority. Each council operates within a defined domain of responsibility, protecting a specific dimension of public trust before information reaches the populations the system is designed to serve.</p>
+
+    <p class="arch-para">At the center sits the Gemini Ethical Core, where clinical ethics and lived experience oversight operate in formal alignment. The Council for Medical Ethics &amp; the Human Future ensures that medical framing, clinical interpretation, and long-horizon risk are evaluated through professional ethical standards. Alongside it, the Survivor Impact &amp; Integrity System Council embeds the lived realities of illness and patient vulnerability directly into the decision structure.</p>
+
+    <p class="arch-para">Surrounding the ethical core are three complementary oversight bodies that protect different operational dimensions of the system.</p>
+
+    <p class="arch-para">The Research Ethics &amp; Integrity Council (REIC) safeguards research discipline and independent validation. It ensures that claims, learning loops, and evidence frameworks remain scientifically credible as the system evolves.</p>
+
+    <p class="arch-para">The Operations &amp; Compliance Council protects regulatory discipline and cross-jurisdictional readiness. Its mandate includes operational controls, compliance frameworks, and the authority to pause deployment where legal or regulatory conditions are not met.</p>
+
+    <p class="arch-para">The Cultural Language Envoy Council (CLEC) governs linguistic and cultural intelligibility. It ensures that information is not merely translated but understood within the cultural and linguistic contexts of the communities receiving it.</p>
+
+    <p class="arch-para arch-closing-line">Together, these five bodies form a Risk-Assessed Operating Framework in which ethics, lived experience, research integrity, regulatory discipline, and cultural language governance operate simultaneously. Authority does not flow downward through a hierarchy. Instead, accountability flows inward toward the ethical core and outward toward responsible public deployment.</p>
+
+  </div>
+</section>
+
+<div class="gold-line-full"></div>
+
+<!-- GLOBAL IMPLICATION -->
+<section class="global-section">
+  <div class="global-inner">
+    <span class="eyebrow reveal visible">Global Implications</span>
+    <p class="global-body reveal reveal-delay-1 visible">
+      The Awareness365 council architecture was built for a specific system. But the governance problem it addresses is not specific. As AI-mediated health information reaches populations that lack institutional access, that navigate multiple languages, and that carry deep historical reasons to distrust health systems, governance frameworks will determine whether these tools produce health literacy or health harm. The structures required to get that right — ethical oversight, survivor governance, research accountability, regulatory discipline, and community-authored language authority — do not yet exist as standard infrastructure in this field. This is a direct attempt to build them.
+    </p>
+  </div>
+</section>
+
+<div class="gold-line-full"></div>
+
+<!-- CLOSING -->
+<section class="closing-section">
+  <div class="closing-glow"></div>
+  <h2 class="closing-title reveal visible">Infrastructure<br>Before<br>Acceleration</h2>
+  <div class="closing-lines reveal reveal-delay-1 visible">
+    <p class="closing-line">Ethics before automation.</p>
+    <p class="closing-line">Trust before scale.</p>
+    <p class="closing-line">Human oversight before algorithmic influence.</p>
+  </div>
+  <p class="closing-body reveal reveal-delay-2 visible">
+    Awareness365 was built in a deliberate sequence. Before the system reaches populations, it must prove that it can protect them. Before it moves faster, it must become more accountable. Before it scales, it must earn the right to do so.
+  </p>
+  <p class="closing-italic reveal reveal-delay-3 visible">Only then does technology deserve velocity.</p>
+  <p class="closing-italic reveal reveal-delay-4 visible" style="margin-top:1.2rem;color:var(--gold);">This architecture exists so that scale never outruns trust.</p>
+  <div class="gold-line-h reveal reveal-delay-4 visible"></div>
+  <p class="closing-mark reveal reveal-delay-5 visible">Awareness365 · Structured for Trust</p>
+</section>
+
+
+<!-- ═══ TRILOGY FOOTER NAVIGATION ══════════════════════════════════════════ -->
+<nav class="trilogy-nav" aria-label="Continue Through the Awareness365 Series">
+  <div class="trilogy-nav-inner">
+    <div class="trilogy-nav-header">
+      <span class="trilogy-nav-eyebrow">Awareness365 · Three-Document Series</span>
+      <h2 class="trilogy-nav-title">Continue Through the Awareness365 Series</h2>
+      <div class="trilogy-nav-rule"></div>
+    </div>
+    <div class="trilogy-nav-grid">
+
+      <a href="Executive_Briefing.htm" class="trilogy-nav-card">
+        <span class="trilogy-card-eyebrow">Return to the Beginning</span>
+        <p class="trilogy-card-headline">Read the Executive Briefing</p>
+        <p class="trilogy-card-body">Revisit the high-level case for why Awareness365 exists and how it deploys.</p>
+        <span class="trilogy-card-arrow">Read Document</span>
+      </a>
+
+      <a href="The_Kappa_Guardian_Ecosystem___Awareness365.htm" class="trilogy-nav-card">
+        <span class="trilogy-card-eyebrow">Continue the Series</span>
+        <p class="trilogy-card-headline">Explore the Kappa Guardian Ecosystem</p>
+        <p class="trilogy-card-body">See how trust delivery operates at community level through the six guardians.</p>
+        <span class="trilogy-card-arrow">Read Document</span>
+      </a>
+
+    </div>
+  </div>
+</nav>
+
+<script>
+// Embed governance image
+// Governance diagram rendered as inline SVG
+
+// Reveal on scroll
+const observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(function(el) {
+  observer.observe(el);
+});
+
+// Immediately reveal hero elements
+document.querySelectorAll('.hero .reveal').forEach(function(el, i) {
+  setTimeout(function() { el.classList.add('visible'); }, 200 + i * 180);
+});
+</script>
+
+
+</body></html>
